@@ -1,0 +1,295 @@
+/* 
+universal selector (*) selects all HTML 
+elements on the page
+*/
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*sets background style to the whole body page*/
+body {
+    background-color: #46344E;
+}
+
+p {
+    padding: 10px;
+}
+/*
+Sets styles for header element and its subelements
+*/
+.header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: "Trirong", serif;
+    background-color: #46344E;
+    color: #FAED26;
+}
+
+.header h1 {
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+
+.header > nav {
+    display: flex;
+    flex-direction: column;
+    font-family: "Trirong", serif, 'Gill Sans', 'Gill Sans MT', "Calibri", 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+             
+}
+
+.header > nav > a {
+    color: white;
+    height: 40px;  margin: 4px;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.main .head {
+    font-family: "Trirong", serif;
+    font-size: 20px;
+    color: white;
+}
+
+/*sets text underline*/
+.underline {
+    text-decoration: underline;
+    color: white;
+}
+
+.underline:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.underline:visited {
+    color: yellow;
+    text-decoration: underline;
+}
+
+.underline:visited:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Sets styles for main image */
+.figimg {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    background-image: url('img/pixels.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin-bottom: 25px;
+}
+
+/*sets styles for subtitle*/
+.figimg h2 {
+    color: #FAED26;
+    position: absolute; 
+    padding: 14px 20px;
+    text-decoration: none;
+    bottom: 0;
+    right: 0;
+    background-color: #5A5560;
+}
+
+/*sets about me block styles*/
+.about-me {
+    flex: 1 0 0;
+    padding: 10px;
+    text-align: center;
+    border-width: 1px;   
+}
+
+/*sets work block styles*/
+.work {
+    flex: 1 0 0;
+    padding: 10px;
+    text-align: center;
+    border-width: 1px;
+}
+
+/*sets contact me block styles*/
+.contact-me {
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;    
+}
+
+.contact-me ul {
+    list-style-type: none;
+}
+
+.contact-me li {
+    display: inline-block;
+    padding: 20px 25px;
+}
+
+.border-after {
+    border-right: 2px solid #FAED26;
+    padding-left: 2px;
+  }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .column {
+    margin: 5px 0;
+    flex-direction: column;
+    flex: 1 1 100%;
+  }
+
+/* sets footer styles */
+footer {
+    text-align: center;
+    width: 100%;
+    background-color:#46344E;
+    color: wheat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+
+footer *{
+   padding-top: 5px;
+}
+
+/* styling of the ul for the Contact me block */
+.contacts > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/* styling of the Li's for the Contact me block */
+.contacts > ul > li {
+     height: 40px;  margin: 4px;
+}
+
+/*  overrides styles whn device screen bigger than 601px*/
+@media only screen and (min-width: 601px) {
+    .column {
+        margin: 5px 0;
+        flex-direction: column;
+        flex: 1 1 50%;
+      }
+    
+    .limit-width-20pc {
+        max-width: 20%;
+    }
+
+    .header-style {
+        border-right: 2px solid #9B786F;
+        border-bottom: none;
+      }
+
+    .figimg {
+        height: 600px;
+    }
+
+    .contacts > ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .header {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;  
+    }
+
+    .header > nav {
+        display: inline-block;
+        flex-direction: row;
+        list-style-type: none;       
+    }
+    
+    .header > nav > a {
+        display: inline-block;
+        flex-direction: row;
+        padding: 14px 20px; 
+        margin: 0;
+    }  
+    
+}
+
+/* Sets styles for cards */
+.card {
+    padding: 15px;
+    height: 100%;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .card a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .card a:hover{
+      color: white;
+      text-decoration: underline;
+  }
+  
+  /* some padding inside the card container */
+  .container {
+    height: 100%;
+    border: 4px solid  #5A5560;
+  }
+
+  .container:hover, .container-100:hover {
+    opacity: 0.8;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+/* sets containers styles */
+.card > div.container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* sets container text */
+.card > div.container > div.banner-text {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    color: white;
+    background-color: #5A5560;
+}
+
+/* sets big container style */
+.card > div.container-100 {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    background-image: url('img/USREP.PNG');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 4px solid  #5A5560;
+}
+
+/* sets container text */
+.card > div.container-100 > div.banner-text {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    color: white;
+    background-color: #5A5560;
+}
